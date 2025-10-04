@@ -5,16 +5,16 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureSubscription: 'devops_prueba' # Este es un nombre que debe cambiar al que crearon.
+  azureSubscription: 'nueva_prueba' # Este es un nombre que debe cambiar al que crearon.
   location: 'eastus2'
-  resourceGroupName: 'devops_prueba' # Este es un nombre que debe cambiar al que crearon.
-  virtualNetworkName: 'VNet-devops_prueba'
-  subnetName: 'Subnet-devops_prueba'
+  resourceGroupName: 'nueva_prueba' # Este es un nombre que debe cambiar al que crearon.
+  virtualNetworkName: 'VNet-nueva_prueba'
+  subnetName: 'Subnet-nueva_prueba'
   addressPrefix: '10.0.0.0/16'
   subnetPrefix: '10.0.1.0/24'
-  securityGroupName: 'NSG-devops_prueba'
-  publicIpName: 'PublicIP-devops_prueba'
-  vmName: 'VM-devops_prueba'
+  securityGroupName: 'NSG-nueva_prueba'
+  publicIpName: 'PublicIP-nueva_prueba'
+  vmName: 'VM-nueva_prueba'
   vmSize: 'Standard_B2s'  # SKU disponible en eastus2
   adminUsername: 'azureuser'
   adminPassword: 'Password1234$'  # Contraseña en texto plano (ajustar según necesidad)
@@ -79,5 +79,6 @@ steps:
       # az vm run-command invoke --resource-group $(resourceGroupName) --name $(vmName) --command-id RunShellScript --scripts "sudo apt update && sudo apt install -y apache2"
       # az vm run-command invoke --resource-group $(resourceGroupName) --name $(vmName) --command-id RunShellScript --scripts "echo 'hola curso devops hemos automatizado el despliegue de maquina virtual desde azure devops' | sudo tee /var/www/html/index.html"
       # echo "Apache instalado y página de bienvenida configurada."
+
 
 
